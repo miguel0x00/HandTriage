@@ -13,7 +13,7 @@ $password = $_POST['password'];
 
 
 // Connect to the database
-$db = new mysqli('localhost', 'root', 'c9XH#34vGs%h#fJs', 'handtriage');
+$db = new mysqli('localhost', 'root', 'USE_YOUR_PASSWORD', 'handtriage');
 
 // Check if the username and password exist in the database
 $query = $db->query("SELECT * FROM Usuarios WHERE usuario='$username' AND password='$password'");
