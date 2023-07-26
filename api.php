@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Decode the JSON data
   $data = json_decode($json_data, true);
   // Connect to the database
-  $db = new mysqli('localhost', 'root', 'c9XH#34vGs%h#fJs', 'handtriage');
+  $db = new mysqli('localhost', 'root', 'USE_YOUR_PASSWORD', 'handtriage');
   // Insert the data into the database
   $sql = "INSERT INTO Triage (idTriage,idPaciente, RitmoCardiaco, ConcOxigeno, Temperatura, fechaLectura) VALUES ('{$data['idTriage']}','{$data['idPaciente']}', '{$data['RitmoCardiaco']}', '{$data['ConcOxigeno']}', '{$data['Temperatura']}', '{$data['fechaLectura']}')";
   echo $sql;
